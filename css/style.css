@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@1000&family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --main-color: #10b759;
+    --white: #fff;
+}
+
+* {
+    font-family: "IBM Plex Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+html {
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 2px;
+    height: 8px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+body {
+    margin: 0;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #001737;
+    text-align: left;
+    background-color: #fff;
+}
+
+/* start header */
+
+.navbar-header {
+    display: flex;
+    position: relative;
+    align-items: stretch;
+    height: 55px;
+    justify-content: flex-start;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(72, 94, 144, 0.16);
+}
+
+
+.navbar-header .burger-menu {
+    margin-left: 20px;
+    color: #8392a5;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-header .burger-menu:hover {
+    color: var(--main-color);
+}
+@media (max-width: 991.98px) {
+    .navbar-header .burger-menu {
+        display: flex;
+    }
+}
+
+.navbar-header .burger-menu i {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+}
+
+.navbar-header .navbar-brand {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    margin-right: 0;
+    order: 1;
+    padding-top: 5.375px;
+    padding-bottom: 5.375px;
+    font-size: 40px;
+}
+
+.navbar-header .navbar-brand img,
+.navbar-menu-header img {
+    height: 26px;
+}
+
+.navbar-menu-wrapper {
+    order: 3;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1060;
+    transform: translateX(-260px);
+    transition: all 0.4s;
+}
+
+
+.navbar-menu-wrapper::-webkit-scrollbar {
+    display: none
+}
+
+
+.navbar-menu-wrapper.active {
+    transform: translateX(0);
+}
+
+
+.navbar-menu-header {
+    height: 55px;
+    padding: 0 15px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(72, 94, 144, 0.16);
+}
+
+.navbar-menu-header i {
+    color: #7987a1;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.navbar-menu-header i:hover {
+    color: #000;
+}
+
+.backdrop {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(15, 21, 32, 0.7);
+    z-index: 40;
+    transition: all 0.4s;
+}
+
+
+.backdrop.active {
+    opacity: 1;
+    visibility: visible;
+    left: 260px;
+}
+
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.navbar-menu {
+    flex-direction: column;
+    padding: 25px 0;
+}
+
+.navbar-menu .nav-label {
+    font-size: 10px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+    letter-spacing: .7px;
+    color: #8392a5;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.pd-l-15 {
+    padding-left: 15px;
+}
+
+
+.navbar-menu .nav-item.with-sub {
+    position: relative;
+}
+
+.navbar-menu .nav-item+.nav-item {
+    margin-top: 10px;
+}
+
+.navbar-menu-sub {
+    position: relative;
+    min-width: 200px;
+    list-style: none;
+    padding: 0 15px 3px 24px;
+    border-left: 1px solid rgba(72, 94, 144, 0.16);
+    margin-top: 10px;
+    margin-left: 28px;
+    z-index: 1000;
+    display: none;
+}
+
+.navbar-menu .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 20px;
+    color: #001737;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-menu .nav-link:hover {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.navbar-menu-sub .nav-sub-link {
+    color: #1b2e4b;
+    white-space: nowrap;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-menu .nav-item.with-sub .nav-link i {
+    display: inline-block;
+    margin-left: auto;
+}
+
+
+.navbar-menu .nav-item.show .navbar-menu-sub {
+    display: block;
+}
+
+.navbar-menu .nav-sub-item.show.show .navbar-menu-sub {
+    display: block;
+}
+
+.navbar-menu-sub ul {
+    position: relative;
+    min-width: 150px;
+}
+
+@media (min-width: 992px) {
+    .navbar-menu-wrapper {
+        width: auto;
+        padding: 0 25px;
+        position: relative;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        background-color: transparent;
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+        order: 2;
+        transform: none;
+        z-index: auto;
+        flex: 1;
+    }
+
+    .navbar-menu {
+        align-items: center;
+        flex-direction: row;
+        padding: 0;
+        width: 100%;
+        max-width: 780px;
+        margin-top: -3px;
+    }
+
+    .navbar-menu-header,
+    .navbar-menu .nav-label {
+        display: none;
+    }
+
+    .navbar-menu .nav-item.with-sub .nav-link i {
+        margin-left: 5px;
+    }
+
+}
+
+.navbar-header .navbar-right {
+    padding: 0 5px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    order: 2;
+}
+
+@media (min-width: 576px){
+    .navbar-header .navbar-right {
+        padding-right: 20px;
+    }
+}
+
+.navbar-right .nav-link {
+    color: #8392a5;
+    padding: 0px;
+    text-transform: uppercase;
+    padding-top: 3px;
+}
+
+.login-profile a {
+    color: #10b759;
+    border: 1px solid #10b759;
+    border-radius: 4px;
+    align-items: center;
+    display: flex;
+    justify-self: center;
+    height: 35px;
+    width: 88px;
+    font-size: 12px;
+    padding-left: 20px;
+}
+
+.login-profile a:hover {
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+.login-profile a i {
+    margin-right: 4px;
+}
