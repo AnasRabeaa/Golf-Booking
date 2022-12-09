@@ -1,6 +1,7 @@
 body {
     background-color: #f1f1f1;
 }
+
 .content-auth {
     background-color: #f1f1f1;
     border: none;
@@ -8,12 +9,10 @@ body {
     display: flex;
 }
 
-
 .container {
     width: 100%;
     display: flex;
     justify-content: center;
-
 }
 
 .first-row {
@@ -24,7 +23,7 @@ body {
 
 @media(max-width:992px) {
     .first-row {
-    flex-direction: column;
+        flex-direction: column;
     }
 }
 
@@ -67,7 +66,6 @@ body {
 .breadcrumb-style3 .breadcrumb-item a {
     color: #1c273c;
 }
-
 
 .breadcrumb-item+.breadcrumb-item::before {
     display: inline-block;
@@ -195,7 +193,6 @@ h1,
     width: 100%;
 }
 
-
 .card-header:first-child {
     border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 }
@@ -214,8 +211,8 @@ h1,
 
 @media (min-width: 576px) {
     .card-header {
-            padding: 15px 20px;
-        }
+        padding: 15px 20px;
+    }
 }
 
 .card-body {
@@ -295,16 +292,17 @@ h1,
 }
 
 @media(max-width:992px) {
+
     .content-auth,
     .card-row {
-            padding: 10px 20px 10px 20px;
-            flex-direction: column;
+        padding: 10px 20px 10px 20px;
+        flex-direction: column;
     }
 
-        .order-2 {
-            order: 1;
-            margin-left: 0px;
-        }
+    .order-2 {
+        order: 1;
+        margin-left: 0px;
+    }
 }
 
 .next i,
@@ -392,7 +390,6 @@ iframe {
 .tx-uppercase {
     text-transform: uppercase;
 }
-
 
 .tx-12 {
     font-size: 12px;
