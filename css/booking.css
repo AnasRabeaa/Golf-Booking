@@ -1,0 +1,287 @@
+body {
+    background-color: #f1f1f1;
+}
+.content-auth {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 40px 160px 25px 160px;
+    display: flex;
+}
+
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.first-row {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+}
+
+@media(max-width:992px) {
+    .first-row {
+    flex-direction: column;
+    }
+}
+
+.right-row {
+    width: 75%;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    height: fit-content;
+}
+
+.left-row {
+    width: 20%;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    height: fit-content;
+}
+
+.breadcrumb {
+    display: flex;
+}
+
+.breadcrumb-style1 .breadcrumb-item,
+.breadcrumb-style2 .breadcrumb-item,
+.breadcrumb-style3 .breadcrumb-item {
+    font-size: 10px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+}
+
+.breadcrumb-style1 .breadcrumb-item a,
+.breadcrumb-style2 .breadcrumb-item a,
+.breadcrumb-style3 .breadcrumb-item a {
+    color: #1c273c;
+}
+
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    color: #7987a1;
+    content: "/";
+}
+
+strong {
+    font-weight: 600;
+}
+
+.tx-spacing--1 {
+    letter-spacing: -0.5px;
+}
+
+.mg-t-10 {
+    margin-top: 10px;
+}
+
+h4,
+.h4 {
+    font-size: 1.3125rem;
+}
+
+.tx-color-03 {
+    color: #8392a5;
+}
+
+.mg-b-0 {
+    margin-bottom: 0px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.flex i {
+    color: gold;
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+.tx-rubik {
+    font-family: 'Rubik', sans-serif;
+}
+
+.tx-normal {
+    font-weight: 400;
+}
+
+h1,
+.h1 {
+    font-size: 2.1875rem;
+}
+
+.tx-dark {
+    color: #1b2e4b;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(72, 94, 144, 0.16);
+    border-radius: 0.25rem;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card {
+    box-shadow: 0 0 10px rgb(28 39 60 / 5%);
+}
+
+.mg-b-20 {
+    margin-bottom: 20px;
+}
+
+.card-row {
+    padding: 0px 160px 25px 160px;
+    display: flex;
+}
+
+.order-2 {
+    order: 2;
+    margin-left: 30px;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.lh-8 {
+    line-height: 1.8;
+}
+
+.tx-gray-700 {
+    color: #596882;
+}
+
+.mg-t-20 {
+    margin-top: 20px;
+}
+
+.carousel-inner img {
+    width: 100%;
+}
+
+
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+.tx-uppercase {
+    text-transform: uppercase;
+}
+
+.card-header,
+.card-footer {
+    background-color: transparent;
+    border-color: rgba(72, 94, 144, 0.16);
+    border-bottom: 1px solid rgba(72, 94, 144, 0.16);
+}
+
+@media (min-width: 576px) {
+    .card-header {
+            padding: 15px 20px;
+        }
+}
+
+.card-body {
+    padding: 15px;
+}
+
+@media (min-width: 576px) {
+    .card-body {
+        padding: 20px;
+    }
+}
+
+.card-img {
+    border-radius: 0.25rem;
+}
+
+.card-img-top {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.card-img-bottom {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.mg-t-10 {
+    margin-top: 10px;
+}
+
+.mg-r-10 {
+    margin-right: 10px;
+}
+
+.mg-b-10 {
+    margin-bottom: 10px;
+}
+
+.mg-l-10 {
+    margin-left: 10px;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.col-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+}
+
+.col-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: rgba(27, 46, 75, 0.7);
+    border: 1px solid #c0ccda;
+    padding: 0.46875rem 0.9375rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+}
